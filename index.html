@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#f97316">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Weekly Meals">
+  <meta name="description" content="Plan your family meals for the week">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <title>Weekly Meals</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+
+    <header class="app-header">
+      <div class="header-inner">
+        <div class="logo">
+          <svg width="28" height="28" viewBox="0 0 512 512" fill="none">
+            <rect width="512" height="512" rx="110" fill="#f97316"/>
+            <circle cx="256" cy="280" r="140" fill="white" opacity="0.95"/>
+            <circle cx="256" cy="280" r="105" fill="#fed7aa"/>
+            <circle cx="256" cy="280" r="72" fill="#fdba74"/>
+            <rect x="148" y="110" width="14" height="90" rx="7" fill="white"/>
+            <rect x="134" y="110" width="10" height="48" rx="5" fill="white"/>
+            <rect x="162" y="110" width="10" height="48" rx="5" fill="white"/>
+            <rect x="148" y="156" width="14" height="8" rx="3" fill="white"/>
+            <rect x="350" y="110" width="14" height="120" rx="7" fill="white"/>
+            <path d="M350 110 Q360 122 364 148 L364 162 L350 162 Z" fill="white"/>
+          </svg>
+          <span>Weekly Meals</span>
+        </div>
+        <nav class="tab-nav">
+          <button class="tab-btn active" data-view="calendar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+            <span>Calendar</span>
+          </button>
+          <button class="tab-btn" data-view="library">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            </svg>
+            <span>Recipes</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main"></main>
+
+    <div id="overlay" class="overlay hidden" role="dialog" aria-modal="true"></div>
+    <div id="modal" class="modal hidden"></div>
+
+    <div id="install-banner" class="install-banner hidden">
+      <div class="install-banner-content">
+        <svg width="24" height="24" viewBox="0 0 512 512"><rect width="512" height="512" rx="110" fill="#f97316"/><circle cx="256" cy="280" r="140" fill="white" opacity="0.95"/><circle cx="256" cy="280" r="105" fill="#fed7aa"/><circle cx="256" cy="280" r="72" fill="#fdba74"/></svg>
+        <div>
+          <strong>Add to Home Screen</strong>
+          <p>Install Weekly Meals as an app</p>
+        </div>
+      </div>
+      <div class="install-banner-actions">
+        <button id="btn-install" class="btn-primary">Install</button>
+        <button id="btn-install-dismiss">Later</button>
+      </div>
+    </div>
+
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
