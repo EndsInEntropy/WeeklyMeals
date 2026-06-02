@@ -1,5 +1,12 @@
-const CACHE_NAME = 'weekly-meals-v1';
-const ASSETS = ['/', '/index.html', '/styles.css', '/app.js', '/manifest.json', '/icon.svg'];
+const CACHE_NAME = 'weekly-meals-v2';
+const ASSETS = [
+  '/WeeklyMeals/',
+  '/WeeklyMeals/index.html',
+  '/WeeklyMeals/styles.css',
+  '/WeeklyMeals/app.js',
+  '/WeeklyMeals/manifest.json',
+  '/WeeklyMeals/icon.svg',
+];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE_NAME).then(c => c.addAll(ASSETS)));
